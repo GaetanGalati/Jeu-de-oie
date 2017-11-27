@@ -100,6 +100,7 @@ VAR
 
 BEGIN
 	clrscr;
+	randomize;
 
 	de := 0;
 	joueur := 0;// Initialisation des variables a 0

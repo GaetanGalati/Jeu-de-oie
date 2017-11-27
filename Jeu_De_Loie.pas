@@ -1,4 +1,3 @@
-
 {ALGORITHME Jeu_De_Loie
 //BUT: Réaliser un jeu de l'oie
 //ENTREES: La validation, et la valeure du dé
@@ -37,16 +36,12 @@ DEBUT
 		ECRIRE 'lancez les deux dés'
 		LIRE de
 
-		REPETER //Petite boucle elle se répete si le joueurs rentre un nombre plus petit que 2 ou plus grand que 12
 
-
-			ECRIRE ('Vous etes sur la case ','[',joueur,']', 'Appuyer sur entrer pour continuer');
-			ECRIRE ('lancez les deux des (Choisiez un nombre entre 2 et 12)');
-			LIRE (de);
-			SI (de > maxD) ET (de < minD) AlORS
-				ECRIRE ' Entrez un nombre valide !';
+		ECRIRE ('Vous etes sur la case ','[',joueur,']', 'Appuyer sur entrer pour continuer');
+		ECRIRE ('lancez les deux des ');
+		de <- ALEATOIRE (12)
+		LIRE (de);
 						
-		JUSQU'A ((de <= maxD) ET (de >= minD));
 
 
 		joueur <-(de + joueur)
@@ -118,14 +113,13 @@ BEGIN
 		TextColor ( white );
 		begin	
 
-
 			writeln ('Vous etes sur la case ',' [',joueur,'] ', 'Appuyer sur entrer pour continuer');
 			readln ();
 			writeln ('lancez les deux des');
 			readln ();
 			de:=random(10)+2;
 			writeln ('Vos des = ',de);
-
+			readln ();
 
 			joueur := joueur + de;// ont ajoute le résultat des dés au placement du joueur (éxemple: si de = 4 et joueur = 2 alors joueur = 6)
 			writeln ('Vous allez jusqu a la case ',' [ ' ,joueur, ' ] ',' Voyons se qui se passe ici...');
@@ -168,3 +162,4 @@ writeln ('Felicitation ! Vous étes a la case [66] vous avez gagné ! Bravo !');
 readln();
 
 END.
+

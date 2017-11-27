@@ -108,7 +108,7 @@ BEGIN
 	clrscr;
 	writeln ('Bienvenue dans le jeu de l oie ! Vous commencer a la case depart: ',joueur);
 
-	REPEAT//Grande boucle repeat, elle se répete jusqu'a se que joueur = 66(fin).
+	REPEAT//boucle repeat, elle se répete jusqu'a se que joueur = 66(fin).
 
 		TextColor ( white );
 		begin	

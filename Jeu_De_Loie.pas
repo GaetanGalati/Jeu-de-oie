@@ -157,7 +157,7 @@ BEGIN
 
 	until (joueur = fin);// jusqu'a joueur = 66
 TextColor ( green );
-writeln ('Felicitation ! Vous étes a la case [66] vous avez gagné ! Bravo !');
+writeln ('VOUS ETES A LA CASE [66] VOUS AVEZ GAGNEZ ! BRAVO !');
 
 readln();
 

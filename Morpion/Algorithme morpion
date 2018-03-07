@@ -44,8 +44,12 @@ DEBUT
 				LIRE (x)
 				ECRIRE(player1, "choisiez une colonne (de 1 a 3)")
 				LIRE (y)
-				grid[i,j]<-"O"
-				start <- 2
+				Si (x <> O) et (y <> O) OU (x <> X) et (y <> X) ALORS 
+					grid[i,j]<-"O"
+					start <- 2
+				SINON
+					ECRIRE "Erreur, rejouer"
+				FINSI
 			FIN
 	SI start = 2 ALORS
 		TANTQUE grid[x,y] <> '-' FAIRE
@@ -54,8 +58,12 @@ DEBUT
 				LIRE (x)
 				ECRIRE(player2, "choisiez une colonne (de 1 a 3)")
 				LIRE (y)
-				grid[i,j]<-"X"
-				start <- 1
+				Si (x <> O) et (y <> O) OU (x <> X) et (y <> X) ALORS 
+					grid[i,j]<-"X"
+					start <- 1
+				SINON
+					ECRIRE "Erreur, rejouer"
+				FINSI
 			FIN
 FINprocedure
 
@@ -132,3 +140,73 @@ DEBUT
 	party(Player1,Player2)
 	win(tabGrid)
 FIN.
+
+/// Jeu d'essais
+{-Le programme demande le nom de chaque joueur
+-Chaque joueur rentrent leurs noms
+-Le programme affiche:
+	- - -
+	- - -
+	- - -
+-Le programme demande au joueur 1 de choisir une ligne 
+-Le joueur 1 rentre "1"
+-Le programme demande au joueur 1 de choisir une colonne  
+-Le joueur 1 rentre "2"
+-Le programme affiche:
+	- X -
+	- - -
+	- - -
+-Le programme demande au joueur 2 de choisir une ligne 
+-Le joueur 2 rentre "2"
+-Le programme demande au joueur 2 de choisir une colonne  
+-Le joueur 2 rentre "2"
+-Le programme affiche:
+	- X -
+	- O -
+	- - -
+-Le programme demande au joueur 1 de choisir une ligne 
+-Le joueur 1 rentre "1"
+-Le programme demande au joueur 1 de choisir une colonne  
+-Le joueur 1 rentre "1"
+-Le programme affiche:
+	X X -
+	- O -
+	- - -
+-Le programme demande au joueur 2 de choisir une ligne 
+-Le joueur 2 rentre "1"
+-Le programme demande au joueur 2 de choisir une colonne  
+-Le joueur 2 rentre "3"
+-Le programme affiche:
+	X X O
+	- O -
+	- - -
+	
+-Le programme demande au joueur 1 de choisir une ligne 
+-Le joueur 1 rentre "2"
+-Le programme demande au joueur 1 de choisir une colonne  
+-Le joueur 1 rentre "2"
+-Le programme affiche:
+ 	ERREUR, rejouer 
+	
+-Le programme demande au joueur 1 de choisir une ligne 
+-Le joueur 1 rentre "2"
+-Le programme demande au joueur 1 de choisir une colonne  
+-Le joueur 1 rentre "1"
+-Le programme affiche:
+	X X O
+	x O -
+	- - -
+ -Le programme demande au joueur 2 de choisir une ligne 
+-Le joueur 2 rentre "3"
+-Le programme demande au joueur 2 de choisir une colonne  
+-Le joueur 2 rentre "3"
+-Le programme affiche:
+	X X O
+	X O -
+	O - -
+	(nom) Remporte la manche ! bravo a lui !
+*3
+	-Le programme affiche:
+		"Incroyable (nom) A gagngez une partie de morpion ! Il est trop fort !"	
+	
+

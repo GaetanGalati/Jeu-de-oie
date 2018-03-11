@@ -1,1 +1,1 @@
-# JEux de morpion, pascal
+# Jeu de morpion, pascal + algo

@@ -1,1 +1,1 @@
-# Jeu-de-oie
+# JEux de morpion, pascal
